@@ -1,0 +1,13 @@
+# Mudar a sessão com o comando abaixo  vai permitir criar usuarios e dar permissões para os mesmos.
+
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+
+
+#Vamos criar o primeiro usuario.
+
+CREATE USER usuariocurso IDENTIFIED BY senha1234 DEFAULT TABLESPACE USERS;
+
+
+#Dando acesso total ao usuario.
+
+GRANT connect, resource TO usuariocurso;
